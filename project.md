@@ -17,20 +17,24 @@ The dataset used in this project enumerates both WoFS and MRMS attributes of pre
 
 ## Modelling
 
-Since we are examining features that most highly impact SDEs, we can use a random forest regression model to identify features of importance. Due to the size of the dataset, I only sampled 1% of the data and used a randomized search to find the most optimal hyperparameters for the random forest regression model. Upon applying the model,
+Since we are examining features that most highly impact SDEs, we can use a random forest regression model to identify features of importance. Due to the size of the dataset, I only sampled 1% of the data and used a randomized search to find the most optimal hyperparameters for the random forest regression model. Upon applying the model, TI score was by far the most important feature, so I repeated this process while excluding it. The exclusion of TI scores did change the order of the subsequent important features, as spatial features are highly correlated with TI scores due to their method of calculation (again, see my research paper for TI score calculation).
 
-I would include code here if I had more time, but I'm submitting the code anyway. I will work on this report more later for my own sake.
+I would include some code here if I had more time, but I'm submitting the code anyway. I will work on this report more later for my own sake.
 
 
 ## Results and Discussion
 
-![](assets/IMG/feature_importance.png){: width="500" }
+Apart from TI score, the most important factor is lead time (with a positive correlation), followed by MRMS mean intensity (negative correlation) and MRMS area (positive correlation). Note that correlation signs are output in the last cell of my code. This coincided with what I manually concluded were most important, as my initial research report focused on lead time and mean intensity. This makes sense, as the longer the lead time, the farther out the storm is being predicted and the less accurate predictions will likely be. Likewise, a discussion on why a mean intensity correlation makes sense is also present in my research paper.
 
-*Figure 1: Here is a caption for my diagram. This one shows a pengiun [1].*
+![](assets/IMG/feature_importance.png)
+
+*Figure 1: Feature Importance, excluding TI score. [1].*
 
 ## Conclusion
 
 I will continue my work over winter break, refining this report and analyzing this output as well as using highly correlating features to produce a rough ridge regression model (as opposed to linear, since there are correlated features) that could potentially be used for bias correction.
+
+I would like to apologize for the lack of detail and polish present here. I do plan to properly finish this project on my own, even if it will not contribute towards my performance in this class, especially as it may prove very useful to my research mentors!
 
 [back](./)
 
