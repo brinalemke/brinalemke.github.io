@@ -26,7 +26,7 @@ I would include some code here if I had more time, but I'm submitting the code a
 
 Apart from TI score, the most important factor is lead time (with a positive correlation), followed by MRMS mean intensity (negative correlation) and MRMS area (positive correlation). Note that correlation signs are output in the last cell of my code. This coincided with what I manually concluded were most important, as my initial research report focused on lead time and mean intensity. This makes sense, as the longer the lead time, the farther out the storm is being predicted and the less accurate predictions will likely be. Likewise, a discussion on why a mean intensity correlation makes sense is also present in my research paper.
 
-![](assets/IMG/feature_importance.png)
+![](assets/IMG/feature_importance2.png)
 
 *Figure 1: Feature Importance, excluding TI score. [1].*
 
