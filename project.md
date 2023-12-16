@@ -17,18 +17,10 @@ The dataset used in this project enumerates both WoFS and MRMS attributes of pre
 
 ## Modelling
 
-Since we are examining features that most highly impact SDEs, we can use a random forest regression model to identify features of importance. 
+Since we are examining features that most highly impact SDEs, we can use a random forest regression model to identify features of importance. Due to the size of the dataset, I only sampled 1% of the data and used a randomized search to find the most optimal hyperparameters for the random forest regression model. Upon applying the model,
 
-```python
-from sklearn.ensemble import ExtraTreesClassifier
-from sklearn.datasets import make_classification
-X, y = make_classification(n_features=4, random_state=0)
-clf = ExtraTreesClassifier(n_estimators=100, random_state=0)
-clf.fit(X, y)
-clf.predict([[0, 0, 0, 0]])
-```
+I would include code here if I had more time, but I'm submitting the code anyway. I will work on this report more later for my own sake.
 
-This is how the method was developed.
 
 ## Results and Discussion
 
